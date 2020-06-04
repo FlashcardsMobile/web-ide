@@ -20,11 +20,9 @@ jobs:
       with:
         node-version: 12.x
     - run: |
-        git config --global user.email "pjacksonlink@gmail.com"
-        git config --global user.name "Peter Jackson Link III"
         npm i
         CI=1 npm run test
-        CI=1 npm run deploy
+        CI=1 npm run build
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2
       with:
