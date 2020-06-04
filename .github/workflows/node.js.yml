@@ -19,6 +19,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
+    - run: npm i
     - run: CI=1 npm run test
     - run: CI=1 npm run deploy
     - name: Upload a Build Artifact
