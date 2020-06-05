@@ -23,6 +23,11 @@ jobs:
         npm i
         CI=1 npm run test
         CI=1 npm run build
+    - name: GitHub Pages action
+      uses: peaceiris/actions-gh-pages@v3.6.1
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2
       with:
